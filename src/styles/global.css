@@ -238,11 +238,40 @@ button:disabled {
 }
 
 .coloring-page {
+  position: relative;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto;
   justify-items: center;
   gap: 12px;
   overflow: hidden;
+}
+
+.coloring-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.34) 36%, rgba(255, 255, 255, 0.14) 72%),
+    linear-gradient(135deg, rgba(255, 248, 251, 0.74), rgba(244, 255, 249, 0.62), rgba(255, 249, 220, 0.7));
+  pointer-events: none;
+}
+
+.coloring-page.has-scene::before {
+  background:
+    radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.28) 34%, rgba(255, 255, 255, 0.1) 72%),
+    linear-gradient(rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0.46)),
+    var(--scene-image) center / cover no-repeat;
+  filter: saturate(0.82) brightness(1.08);
+}
+
+.editor-top,
+.canvas-stage,
+.editor-bottom,
+.modal-backdrop,
+.celebration {
+  position: relative;
+  z-index: 1;
 }
 
 .editor-top {
@@ -288,13 +317,13 @@ button:disabled {
   position: relative;
   align-self: center;
   justify-self: center;
-  width: min(calc(100dvh - 220px - var(--safe-top) - var(--safe-bottom)), calc(100vw - 48px), 720px);
-  min-width: min(420px, calc(100vw - 48px));
+  width: min(calc(100dvh - 178px - var(--safe-top) - var(--safe-bottom)), calc(100vw - 36px), 860px);
+  min-width: min(500px, calc(100vw - 36px));
   aspect-ratio: 1;
   border: 8px solid rgba(255, 255, 255, 0.92);
   border-radius: 24px;
   background: #ffffff;
-  box-shadow: 0 16px 38px rgba(74, 48, 86, 0.16);
+  box-shadow: 0 18px 44px rgba(74, 48, 86, 0.18);
   overflow: hidden;
   touch-action: none;
 }
@@ -496,14 +525,63 @@ button:disabled {
 }
 
 .celebration {
-  border: 0;
   overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(255, 255, 255, 0.94), rgba(255, 215, 232, 0.7) 42%, rgba(191, 238, 255, 0.68)),
+    rgba(255, 248, 251, 0.86);
 }
 
-.celebration strong {
+.celebration-panel {
+  position: relative;
   z-index: 2;
-  font-size: 8rem;
+  display: grid;
+  place-items: center;
+  gap: 14px;
+  min-width: min(460px, 90vw);
+  padding: 26px 30px 32px;
+  border-radius: 36px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 24px 60px rgba(74, 48, 86, 0.18);
+}
+
+.celebration-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  background: rgba(92, 70, 112, 0.1);
+  color: #473452;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.celebration-star {
+  z-index: 2;
+  font-size: clamp(6rem, 13vw, 9rem);
+  line-height: 1;
   animation: pop-star 900ms ease infinite alternate;
+}
+
+.celebration-panel p {
+  margin: 0;
+  color: #5c4670;
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  font-weight: 900;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.celebration-play {
+  display: grid;
+  place-items: center;
+  width: 98px;
+  height: 98px;
+  border-radius: 999px;
+  background: #6ee69b;
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(65, 200, 111, 0.35), inset 0 -7px 0 rgba(48, 145, 86, 0.16);
 }
 
 .sparkle {
@@ -666,7 +744,7 @@ button:disabled {
   }
 
   .canvas-stage {
-    width: min(calc(100dvh - 196px - var(--safe-top) - var(--safe-bottom)), calc(100vw - 20px));
+    width: min(calc(100dvh - 170px - var(--safe-top) - var(--safe-bottom)), calc(100vw - 20px));
     min-width: 0;
     border-width: 5px;
     border-radius: 18px;

@@ -1,15 +1,17 @@
+import { Play } from "lucide-react";
 import { appConfig } from "../config/appConfig";
 
 type Props = {
   show: boolean;
   onDone: () => void;
+  onReplay: () => void;
 };
 
-export const CelebrationOverlay = ({ show, onDone }: Props) => {
+export const CelebrationOverlay = ({ show, onDone, onReplay }: Props) => {
   if (!show) return null;
 
   return (
-    <button className="celebration" type="button" aria-label="Celebración" onClick={onDone}>
+    <div className="celebration" role="dialog" aria-modal="true" aria-label="Celebracion">
       {appConfig.enableAnimations &&
         Array.from({ length: 28 }).map((_, index) => (
           <span
@@ -22,7 +24,17 @@ export const CelebrationOverlay = ({ show, onDone }: Props) => {
             }}
           />
         ))}
-      <strong>⭐</strong>
-    </button>
+
+      <div className="celebration-panel">
+        <button className="celebration-close" type="button" aria-label="Cerrar celebracion" onClick={onDone}>
+          ×
+        </button>
+        <strong className="celebration-star">⭐</strong>
+        <p>Muy bien hecho Amara</p>
+        <button className="celebration-play" type="button" aria-label="Repetir animacion" onClick={onReplay}>
+          <Play size={54} fill="currentColor" />
+        </button>
+      </div>
+    </div>
   );
 };

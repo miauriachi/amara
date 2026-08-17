@@ -1,5 +1,5 @@
 import { ArrowLeft, Brush, Check, Eraser, PaintBucket, Redo2, RotateCcw, Save, Trash2, Undo2 } from "lucide-react";
-import { useRef, useState } from "react";
+import { type CSSProperties, useRef, useState } from "react";
 import { BackgroundPicker } from "../components/BackgroundPicker";
 import { BrushSizeControl } from "../components/BrushSizeControl";
 import { CelebrationOverlay } from "../components/CelebrationOverlay";
@@ -52,15 +52,25 @@ export const ColoringPage = ({ drawing, savedDrawing, onBack }: Props) => {
 
   const finish = async () => {
     await save();
+    playFinishAnimation();
+    setCelebrate(true);
+  };
+
+  const playFinishAnimation = () => {
     const animationKind = drawing.id === "unicorn" ? "gallop" : "happy";
     canvasRef.current?.playAnimation(animationKind);
     if (animationKind === "gallop") playGallopSound();
     else playHappySound();
-    setCelebrate(true);
   };
 
+  const pageStyle = activeBackground.src
+    ? ({
+        "--scene-image": `url("${activeBackground.src}")`,
+      } as CSSProperties)
+    : undefined;
+
   return (
-    <section className="coloring-page" aria-label={drawing.title}>
+    <section className={`coloring-page ${activeBackground.src ? "has-scene" : ""}`} style={pageStyle} aria-label={drawing.title}>
       <header className="editor-top">
         <IconButton label="Regresar" onClick={onBack}>
           <ArrowLeft size={36} />
@@ -119,7 +129,7 @@ export const ColoringPage = ({ drawing, savedDrawing, onBack }: Props) => {
           setConfirmClear(false);
         }}
       />
-      <CelebrationOverlay show={celebrate} onDone={() => setCelebrate(false)} />
+      <CelebrationOverlay show={celebrate} onDone={() => setCelebrate(false)} onReplay={playFinishAnimation} />
     </section>
   );
 };

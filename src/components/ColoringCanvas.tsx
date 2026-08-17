@@ -410,7 +410,14 @@ export const ColoringCanvas = forwardRef<ColoringCanvasHandle, Props>(
 
         backgroundCtx.fillStyle = "#ffffff";
         backgroundCtx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
-        if (backgroundImage) drawImageCover(backgroundCtx, backgroundImage);
+        if (backgroundImage) {
+          backgroundCtx.save();
+          backgroundCtx.globalAlpha = 0.2;
+          drawImageCover(backgroundCtx, backgroundImage);
+          backgroundCtx.restore();
+          backgroundCtx.fillStyle = "rgba(255, 255, 255, 0.68)";
+          backgroundCtx.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
+        }
 
         colorCtx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
         if (savedImageData) colorCtx.putImageData(savedImageData, 0, 0);
