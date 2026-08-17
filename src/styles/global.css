@@ -478,8 +478,7 @@ button:disabled {
   outline-offset: 2px;
 }
 
-.modal-backdrop,
-.celebration {
+.modal-backdrop {
   position: fixed;
   inset: 0;
   z-index: 10;
@@ -487,6 +486,14 @@ button:disabled {
   place-items: center;
   padding: 24px;
   background: rgba(50, 40, 58, 0.38);
+}
+
+.celebration {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  overflow: hidden;
 }
 
 .confirm-panel {
@@ -524,32 +531,28 @@ button:disabled {
   background: #ffd7e8;
 }
 
-.celebration {
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 50% 38%, rgba(255, 255, 255, 0.94), rgba(255, 215, 232, 0.7) 42%, rgba(191, 238, 255, 0.68)),
-    rgba(255, 248, 251, 0.86);
-}
-
-.celebration-panel {
-  position: relative;
+.celebration-banner {
+  position: absolute;
+  left: 50%;
+  bottom: calc(112px + var(--safe-bottom));
   z-index: 2;
-  display: grid;
-  place-items: center;
-  gap: 14px;
-  min-width: min(460px, 90vw);
-  padding: 26px 30px 32px;
-  border-radius: 36px;
-  background: rgba(255, 255, 255, 0.86);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: min(92vw, 780px);
+  padding: 14px 18px 14px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
   box-shadow: 0 24px 60px rgba(74, 48, 86, 0.18);
+  backdrop-filter: blur(14px);
+  pointer-events: auto;
+  transform: translateX(-50%);
+  animation: banner-pop 460ms ease both;
 }
 
 .celebration-close {
-  position: absolute;
-  top: 12px;
-  right: 14px;
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   border-radius: 999px;
   background: rgba(92, 70, 112, 0.1);
   color: #473452;
@@ -558,30 +561,41 @@ button:disabled {
 }
 
 .celebration-star {
-  z-index: 2;
-  font-size: clamp(6rem, 13vw, 9rem);
+  font-size: clamp(3.4rem, 7vw, 5.5rem);
   line-height: 1;
   animation: pop-star 900ms ease infinite alternate;
 }
 
-.celebration-panel p {
+.celebration-banner p {
   margin: 0;
   color: #5c4670;
-  font-size: clamp(2rem, 5vw, 3.6rem);
+  font-size: clamp(1.65rem, 3.5vw, 3rem);
   font-weight: 900;
   letter-spacing: 0;
   text-align: center;
+  white-space: nowrap;
 }
 
 .celebration-play {
   display: grid;
   place-items: center;
-  width: 98px;
-  height: 98px;
+  width: 78px;
+  height: 78px;
   border-radius: 999px;
   background: #6ee69b;
   color: #ffffff;
   box-shadow: 0 12px 24px rgba(65, 200, 111, 0.35), inset 0 -7px 0 rgba(48, 145, 86, 0.16);
+}
+
+@keyframes banner-pop {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(22px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
 }
 
 .sparkle {
@@ -770,5 +784,22 @@ button:disabled {
     flex-basis: 50px;
     width: 50px;
     height: 50px;
+  }
+
+  .celebration-banner {
+    bottom: calc(92px + var(--safe-bottom));
+    gap: 9px;
+    padding: 10px 12px;
+  }
+
+  .celebration-close {
+    width: 38px;
+    height: 38px;
+    font-size: 1.6rem;
+  }
+
+  .celebration-play {
+    width: 62px;
+    height: 62px;
   }
 }

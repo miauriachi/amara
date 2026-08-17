@@ -18,9 +18,10 @@ type Props = {
   drawing: Drawing;
   savedDrawing?: SavedDrawing;
   onBack: () => void;
+  onDoneContinue: () => void;
 };
 
-export const ColoringPage = ({ drawing, savedDrawing, onBack }: Props) => {
+export const ColoringPage = ({ drawing, savedDrawing, onBack, onDoneContinue }: Props) => {
   const canvasRef = useRef<ColoringCanvasHandle | null>(null);
   const [activePaint, setActivePaint] = useState(appConfig.paintStyles[0]);
   const [activeBackground, setActiveBackground] = useState(findBackground(savedDrawing?.backgroundId));
@@ -129,7 +130,7 @@ export const ColoringPage = ({ drawing, savedDrawing, onBack }: Props) => {
           setConfirmClear(false);
         }}
       />
-      <CelebrationOverlay show={celebrate} onDone={() => setCelebrate(false)} onReplay={playFinishAnimation} />
+      <CelebrationOverlay show={celebrate} onDone={() => setCelebrate(false)} onContinue={onDoneContinue} />
     </section>
   );
 };

@@ -60,6 +60,13 @@ export const App = () => {
         <ColoringPage
           drawing={screen.drawing}
           savedDrawing={screen.saved}
+          onDoneContinue={() => {
+            if (screen.saved) {
+              setScreen({ name: "gallery" });
+            } else {
+              setScreen({ name: "category", categoryId: screen.drawing.categoryId });
+            }
+          }}
           onBack={() => {
             if (screen.saved) {
               setScreen({ name: "gallery" });

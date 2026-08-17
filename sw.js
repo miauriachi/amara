@@ -1,4 +1,4 @@
-const CACHE_NAME = "amara-colors-v9";
+const CACHE_NAME = "amara-colors-v10";
 const APP_SHELL = [
   "./",
   "./index.html",
