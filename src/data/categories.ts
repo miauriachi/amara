@@ -110,24 +110,11 @@ export const categories: Category[] = [
   },
   {
     id: "music",
-    title: "Musica pop",
+    title: "Guerreras pop",
     emoji: icons.music,
     color: "#ffc9ef",
     drawings: [
-      makeDrawing("music", "singer", "Cantante", icons.music, "singer.svg"),
-      makeDrawing("music", "dancer", "Bailarina pop", icons.sparkle, "dancer.svg"),
-      makeDrawing("music", "boy-band", "Chico pop", icons.music, "boy-band.svg"),
-    ],
-  },
-  {
-    id: "cute",
-    title: "Ternuritas",
-    emoji: icons.heart,
-    color: "#fff0b8",
-    drawings: [
-      makeDrawing("cute", "cute-monster", "Monstruito", icons.heart, "cute-monster.svg"),
-      makeDrawing("cute", "baby-bunny", "Conejito", icons.heart, "baby-bunny.svg"),
-      makeDrawing("cute", "doll", "Muneca tierna", icons.sparkle, "doll.svg"),
+      makeDrawing("music", "pop-warriors", "Guerreras pop", icons.sparkle, "pop-warriors.png"),
     ],
   },
 ];
