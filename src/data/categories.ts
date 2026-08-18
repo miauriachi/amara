@@ -1,4 +1,4 @@
-import type { Category, Drawing } from "../types/coloring";
+﻿import type { Category, Drawing } from "../types/coloring";
 import { assetUrl } from "../utils/assets";
 
 const makeDrawing = (
@@ -19,71 +19,71 @@ export const categories: Category[] = [
   {
     id: "unicorns",
     title: "Unicornios",
-    emoji: "🦄",
+    emoji: "ðŸ¦„",
     color: "#ffd7e8",
-    drawings: [makeDrawing("unicorns", "unicorn", "Unicornio", "🦄", "unicorn.png")],
+    drawings: [makeDrawing("unicorns", "unicorn", "Unicornio", "ðŸ¦„", "unicorn.svg")],
   },
   {
     id: "animals",
     title: "Animales",
-    emoji: "🐶",
+    emoji: "ðŸ¶",
     color: "#c7f2df",
     drawings: [
-      makeDrawing("animals", "cat", "Gato", "🐱", "cat.png"),
-      makeDrawing("animals", "dog", "Perro", "🐶", "dog.png"),
-      makeDrawing("animals", "butterfly", "Mariposa", "🦋", "butterfly.svg"),
-      makeDrawing("animals", "turtle", "Tortuga", "🐢", "turtle.svg"),
+      makeDrawing("animals", "cat", "Gato", "ðŸ±", "cat.svg"),
+      makeDrawing("animals", "dog", "Perro", "ðŸ¶", "dog.svg"),
+      makeDrawing("animals", "butterfly", "Mariposa", "ðŸ¦‹", "butterfly.svg"),
+      makeDrawing("animals", "turtle", "Tortuga", "ðŸ¢", "turtle.svg"),
     ],
   },
   {
     id: "dinosaurs",
     title: "Dinosaurios",
-    emoji: "🦖",
+    emoji: "ðŸ¦–",
     color: "#d7f7a8",
     drawings: [
-      makeDrawing("dinosaurs", "dino", "Dinosaurio", "🦖", "dino.svg"),
-      makeDrawing("dinosaurs", "baby-dino", "Dino bebé", "🥚", "baby-dino.svg"),
+      makeDrawing("dinosaurs", "dino", "Dinosaurio", "ðŸ¦–", "dino.svg"),
+      makeDrawing("dinosaurs", "baby-dino", "Dino bebÃ©", "ðŸ¥š", "baby-dino.svg"),
     ],
   },
   {
     id: "fantasy",
-    title: "Fantasía",
-    emoji: "🌈",
+    title: "FantasÃ­a",
+    emoji: "ðŸŒˆ",
     color: "#d9ceff",
     drawings: [
-      makeDrawing("fantasy", "star", "Estrella", "⭐", "star.svg"),
-      makeDrawing("fantasy", "rainbow", "Arcoiris", "🌈", "rainbow.svg"),
-      makeDrawing("fantasy", "castle", "Castillo", "🏰", "castle.svg"),
+      makeDrawing("fantasy", "star", "Estrella", "â­", "star.svg"),
+      makeDrawing("fantasy", "rainbow", "Arcoiris", "ðŸŒˆ", "rainbow.svg"),
+      makeDrawing("fantasy", "castle", "Castillo", "ðŸ°", "castle.svg"),
     ],
   },
   {
     id: "food",
     title: "Comida",
-    emoji: "🍦",
+    emoji: "ðŸ¦",
     color: "#ffe4b8",
     drawings: [
-      makeDrawing("food", "ice-cream", "Helado", "🍦", "ice-cream.png"),
-      makeDrawing("food", "cupcake", "Pastelito", "🧁", "cupcake.svg"),
+      makeDrawing("food", "ice-cream", "Helado", "ðŸ¦", "ice-cream.png"),
+      makeDrawing("food", "cupcake", "Pastelito", "ðŸ§", "cupcake.svg"),
     ],
   },
   {
     id: "sea",
     title: "Mar",
-    emoji: "🐠",
+    emoji: "ðŸ ",
     color: "#bfeeff",
     drawings: [
-      makeDrawing("sea", "fish", "Pez", "🐠", "fish.png"),
-      makeDrawing("sea", "whale", "Ballena", "🐳", "whale.svg"),
+      makeDrawing("sea", "fish", "Pez", "ðŸ ", "fish.png"),
+      makeDrawing("sea", "whale", "Ballena", "ðŸ³", "whale.svg"),
     ],
   },
   {
     id: "space",
     title: "Espacio",
-    emoji: "🚀",
+    emoji: "ðŸš€",
     color: "#c9ddff",
     drawings: [
-      makeDrawing("space", "rocket", "Cohete", "🚀", "rocket.png"),
-      makeDrawing("space", "ufo", "Nave", "🛸", "ufo.svg"),
+      makeDrawing("space", "rocket", "Cohete", "ðŸš€", "rocket.svg"),
+      makeDrawing("space", "astronaut", "Astronauta", "ðŸ›¸", "astronaut.svg"),
     ],
   },
 ];
@@ -92,3 +92,4 @@ export const allDrawings = categories.flatMap((category) => category.drawings);
 
 export const findDrawing = (drawingId: string) =>
   allDrawings.find((drawing) => drawing.id === drawingId);
+

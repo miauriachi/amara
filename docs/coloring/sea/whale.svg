@@ -1,10 +1,129 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-  <rect width="640" height="640" fill="white"/>
-  <path d="M106 355c52-91 160-133 286-105 87 19 139 66 152 136 10 54-36 106-103 106H242c-91 0-164-61-136-137Z" fill="none" stroke="#111" stroke-width="22" stroke-linejoin="round"/>
-  <path d="M508 326c42-58 84-61 122-10-32 7-52 25-61 54 29 10 45 34 49 72-45-5-78-25-98-59" fill="none" stroke="#111" stroke-width="22" stroke-linejoin="round"/>
-  <circle cx="235" cy="332" r="16" fill="#111"/>
-  <path d="M274 406c58 31 126 28 198-8" fill="none" stroke="#111" stroke-width="16" stroke-linecap="round"/>
-  <path d="M296 244c-23-72 34-115 85-162 27 68 2 118-85 162Z" fill="none" stroke="#111" stroke-width="18" stroke-linejoin="round"/>
-  <path d="M346 183c-22-35 3-70 45-95 12 43-1 75-45 95Z" fill="none" stroke="#111" stroke-width="16" stroke-linejoin="round"/>
-  <path d="M132 250c-28-32-24-73 12-122 24 45 21 86-12 122Zm86-26c-17-38-1-74 48-109 10 48-6 84-48 109Z" fill="none" stroke="#111" stroke-width="16" stroke-linejoin="round"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg3002"
+   style="enable-background:new"
+   sodipodi:docname="whale-love.svg"
+   viewBox="0 0 370.56886 350.46269"
+   version="1.1"
+   inkscape:version="0.91 r"
+   width="370.56885"
+   height="350.46268">
+  <defs
+     id="defs12" />
+  <sodipodi:namedview
+     id="base"
+     inkscape:showpageshadow="true"
+     inkscape:zoom="1.7037327"
+     borderopacity="1.0"
+     inkscape:current-layer="layer2"
+     inkscape:cx="185.28733"
+     inkscape:cy="127.92804"
+     borderlayer="false"
+     inkscape:object-paths="false"
+     inkscape:window-maximized="1"
+     inkscape:snap-bbox="false"
+     showgrid="false"
+     inkscape:guide-bbox="true"
+     units="px"
+     inkscape:snap-midpoints="false"
+     showguides="true"
+     bordercolor="#666666"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:snap-smooth-nodes="false"
+     inkscape:window-width="1920"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     pagecolor="#ffffff"
+     inkscape:bbox-paths="false"
+     inkscape:document-units="px"
+     inkscape:window-height="1014"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5" />
+  <g
+     id="layer2"
+     inkscape:label="whale"
+     inkscape:groupmode="layer"
+     transform="translate(4.3194576,7.5117305)">
+    <path
+       inkscape:connector-curvature="0"
+       d="m 256.7581,136.0037 c -22.687,1.4282 -45.656,10.986 -64.325,23.465 -44.286,29.605 -64.063,132.17 -116.79,124.57 -7.3248,-1.0555 -0.735856,-3.8524 -1.498856,-8.4324 12.159,-14.032 23.746856,-43.543 11.039856,-68.25 -16.434,-31.954 -39.46,-3.1638 -42.595,1.0119 -0.26554,-0.15859 -0.56751,-0.35687 -1.0136,-0.60706 -4.0724,-2.284 -15.187,-7.8009 -24.513,-5.8236 -6.9947,1.483 -12.988,7.1726 -14.247,21.603 -2.512,28.782 30.643,48.557 46.623,56.365 0.51165,5.2231 1.3272,10.915 2.3317,17.395 1.3324,8.5959 11.111,20.819 18.751,24.978 40.91,22.269 85.619,11.419 132.06,7.8478 40.67,-3.1271 86.642,7.5472 121.62,-13.438 15.511,-9.306 26.211,-27.256 30.651,-44.791 7.3406,-28.986 6.2355,-63.684 -9.3196,-89.221 -14.494,-23.795 -42.363,-41.468 -69.88,-45.839 -6.2098,-0.98632 -12.546,-1.2375 -18.898,-0.83763 z"
+       style="fill:#ffffff;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:6,12;stroke-dashoffset:0"
+       id="path3970"
+       sodipodi:nodetypes="ccccscssccccsscsccc" />
+    <circle
+       r="6.0241761"
+       cy="271.14499"
+       cx="333.16519"
+       transform="matrix(0.9988279,0.04840273,-0.04840273,0.9988279,0,0)"
+       style="fill:#ffffff;stroke:#000000;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path4009" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 240.4181,167.2437 c 1.4477,4.0299 7.3057,4.0313 12.569,2.0039 2.977,-1.1468 5.7218,-3.8352 5.8958,-6.8024"
+       style="fill:none;stroke:#000000;stroke-width:3.57520008;stroke-linecap:round"
+       id="path4327" />
+    <path
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccccccccccc"
+       d="m 127.24889,95.38101 c 40.48695,30.81297 81.2988,37.49196 121.29185,69.90667 -29.81462,-36.71266 -68.36285,-53.29435 -99.07249,-89.01508 -26.5838,-16.41803 -0.93829,-22.33537 10.82499,-18.25623 9.24311,3.71909 16.52967,-4.2062 3.15461,-9.20975 -15.50684,-0.42274 -19.20969,-17.70378 -4.8421,-18.85968 10.29425,0.51925 13.23222,-11.86548 -0.32858,-11.63602 -14.13684,0.31817 -26.70999,10.1017 -42.4784,2.88317 -5.41273,-6.7384 -0.0923,-25.73908 -11.6025,-16.62359 C 97.08029,11.52797 81.7604,16.15443 75.35815,0.07598 56.3116,-3.34169 74.93505,19.45119 82.03705,27.7364 95.71091,46.44519 69.44362,31.3464 61.65439,31.41866 42.79439,28.56855 22.68381,23.37206 5.99475,28.7507 -3.62259,41.41761 24.00612,43.25892 32.49312,47.31649 49.47042,52.32212 67.22778,57.3008 83.04207,69.56008 69.7361,68.29956 58.03179,75.68963 51.742,85.47409 c 9.32402,8.42118 19.99476,-9.79255 32.71187,0.31423 17.51068,8.61602 5.09171,22.05748 -6.4899,18.8022 -11.30908,0.92884 -12.36894,33.74168 2.70494,26.13402 7.80304,-15.51845 28.67904,-33.73565 46.57998,-35.34354 l 0,1e-5 z"
+       style="fill:#ffffff;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path3837" />
+  </g>
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
+        <dc:publisher>
+          <cc:Agent
+             rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Whale love</dc:title>
+        <dc:date>2010-04-12T01:14:20</dc:date>
+        <dc:description>A simple small whale whit a heart caudal fin.</dc:description>
+        <dc:source>https://openclipart.org/detail/46279/whale-love-by-eriol</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>eriol</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>animal</rdf:li>
+            <rdf:li>heart</rdf:li>
+            <rdf:li>love</rdf:li>
+            <rdf:li>mammal</rdf:li>
+            <rdf:li>whale</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" />
+        <cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
 </svg>
