@@ -13,7 +13,7 @@ export const HomePage = ({ onCategory, onGallery }: Props) => (
       <h1>{appConfig.appName}</h1>
       <button className="gallery-card" type="button" aria-label="Mis dibujos" onClick={onGallery}>
         <Images size={48} aria-hidden />
-        <span>⭐</span>
+        <span>{"\u2B50"}</span>
       </button>
     </header>
 
@@ -32,7 +32,7 @@ export const HomePage = ({ onCategory, onGallery }: Props) => (
         </button>
       ))}
       <button className="category-card saved-card" type="button" aria-label="Mis dibujos" onClick={onGallery}>
-        <span className="category-emoji">⭐</span>
+        <span className="category-emoji">{"\u2B50"}</span>
         <span className="category-title">Mis dibujos</span>
       </button>
     </div>

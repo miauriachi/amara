@@ -1,5 +1,27 @@
-﻿import type { Category, Drawing } from "../types/coloring";
+import type { Category, Drawing } from "../types/coloring";
 import { assetUrl } from "../utils/assets";
+
+const icons = {
+  unicorn: "\uD83E\uDD84",
+  dog: "\uD83D\uDC36",
+  cat: "\uD83D\uDC31",
+  butterfly: "\uD83E\uDD8B",
+  turtle: "\uD83D\uDC22",
+  dino: "\uD83E\uDD96",
+  egg: "\uD83E\uDD5A",
+  rainbow: "\uD83C\uDF08",
+  star: "\u2B50",
+  castle: "\uD83C\uDFF0",
+  iceCream: "\uD83C\uDF66",
+  cupcake: "\uD83E\uDDC1",
+  fish: "\uD83D\uDC20",
+  whale: "\uD83D\uDC33",
+  rocket: "\uD83D\uDE80",
+  astronaut: "\uD83E\uDDD1\u200D\uD83D\uDE80",
+  music: "\uD83C\uDFA4",
+  sparkle: "\u2728",
+  heart: "\uD83D\uDC95",
+};
 
 const makeDrawing = (
   categoryId: string,
@@ -19,71 +41,93 @@ export const categories: Category[] = [
   {
     id: "unicorns",
     title: "Unicornios",
-    emoji: "ðŸ¦„",
+    emoji: icons.unicorn,
     color: "#ffd7e8",
-    drawings: [makeDrawing("unicorns", "unicorn", "Unicornio", "ðŸ¦„", "unicorn.svg")],
+    drawings: [makeDrawing("unicorns", "unicorn", "Unicornio", icons.unicorn, "unicorn.svg")],
   },
   {
     id: "animals",
     title: "Animales",
-    emoji: "ðŸ¶",
+    emoji: icons.dog,
     color: "#c7f2df",
     drawings: [
-      makeDrawing("animals", "cat", "Gato", "ðŸ±", "cat.svg"),
-      makeDrawing("animals", "dog", "Perro", "ðŸ¶", "dog.svg"),
-      makeDrawing("animals", "butterfly", "Mariposa", "ðŸ¦‹", "butterfly.svg"),
-      makeDrawing("animals", "turtle", "Tortuga", "ðŸ¢", "turtle.svg"),
+      makeDrawing("animals", "cat", "Gato", icons.cat, "cat.svg"),
+      makeDrawing("animals", "dog", "Perro", icons.dog, "dog.svg"),
+      makeDrawing("animals", "butterfly", "Mariposa", icons.butterfly, "butterfly.svg"),
+      makeDrawing("animals", "turtle", "Tortuga", icons.turtle, "turtle.svg"),
     ],
   },
   {
     id: "dinosaurs",
     title: "Dinosaurios",
-    emoji: "ðŸ¦–",
+    emoji: icons.dino,
     color: "#d7f7a8",
     drawings: [
-      makeDrawing("dinosaurs", "dino", "Dinosaurio", "ðŸ¦–", "dino.svg"),
-      makeDrawing("dinosaurs", "baby-dino", "Dino bebÃ©", "ðŸ¥š", "baby-dino.svg"),
+      makeDrawing("dinosaurs", "dino", "Dinosaurio", icons.dino, "dino.svg"),
+      makeDrawing("dinosaurs", "baby-dino", "Dino bebe", icons.egg, "baby-dino.svg"),
     ],
   },
   {
     id: "fantasy",
-    title: "FantasÃ­a",
-    emoji: "ðŸŒˆ",
+    title: "Fantasia",
+    emoji: icons.rainbow,
     color: "#d9ceff",
     drawings: [
-      makeDrawing("fantasy", "star", "Estrella", "â­", "star.svg"),
-      makeDrawing("fantasy", "rainbow", "Arcoiris", "ðŸŒˆ", "rainbow.svg"),
-      makeDrawing("fantasy", "castle", "Castillo", "ðŸ°", "castle.svg"),
+      makeDrawing("fantasy", "star", "Estrella", icons.star, "star.svg"),
+      makeDrawing("fantasy", "rainbow", "Arcoiris", icons.rainbow, "rainbow.svg"),
+      makeDrawing("fantasy", "castle", "Castillo", icons.castle, "castle.svg"),
     ],
   },
   {
     id: "food",
     title: "Comida",
-    emoji: "ðŸ¦",
+    emoji: icons.iceCream,
     color: "#ffe4b8",
     drawings: [
-      makeDrawing("food", "ice-cream", "Helado", "ðŸ¦", "ice-cream.png"),
-      makeDrawing("food", "cupcake", "Pastelito", "ðŸ§", "cupcake.svg"),
+      makeDrawing("food", "ice-cream", "Helado", icons.iceCream, "ice-cream.png"),
+      makeDrawing("food", "cupcake", "Pastelito", icons.cupcake, "cupcake.svg"),
     ],
   },
   {
     id: "sea",
     title: "Mar",
-    emoji: "ðŸ ",
+    emoji: icons.fish,
     color: "#bfeeff",
     drawings: [
-      makeDrawing("sea", "fish", "Pez", "ðŸ ", "fish.png"),
-      makeDrawing("sea", "whale", "Ballena", "ðŸ³", "whale.svg"),
+      makeDrawing("sea", "fish", "Pez", icons.fish, "fish.png"),
+      makeDrawing("sea", "whale", "Ballena", icons.whale, "whale.svg"),
     ],
   },
   {
     id: "space",
     title: "Espacio",
-    emoji: "ðŸš€",
+    emoji: icons.rocket,
     color: "#c9ddff",
     drawings: [
-      makeDrawing("space", "rocket", "Cohete", "ðŸš€", "rocket.svg"),
-      makeDrawing("space", "astronaut", "Astronauta", "ðŸ›¸", "astronaut.svg"),
+      makeDrawing("space", "rocket", "Cohete", icons.rocket, "rocket.svg"),
+      makeDrawing("space", "astronaut", "Astronauta", icons.astronaut, "astronaut.svg"),
+    ],
+  },
+  {
+    id: "music",
+    title: "Musica pop",
+    emoji: icons.music,
+    color: "#ffc9ef",
+    drawings: [
+      makeDrawing("music", "singer", "Cantante", icons.music, "singer.svg"),
+      makeDrawing("music", "dancer", "Bailarina pop", icons.sparkle, "dancer.svg"),
+      makeDrawing("music", "boy-band", "Chico pop", icons.music, "boy-band.svg"),
+    ],
+  },
+  {
+    id: "cute",
+    title: "Ternuritas",
+    emoji: icons.heart,
+    color: "#fff0b8",
+    drawings: [
+      makeDrawing("cute", "cute-monster", "Monstruito", icons.heart, "cute-monster.svg"),
+      makeDrawing("cute", "baby-bunny", "Conejito", icons.heart, "baby-bunny.svg"),
+      makeDrawing("cute", "doll", "Muneca tierna", icons.sparkle, "doll.svg"),
     ],
   },
 ];
@@ -92,4 +136,3 @@ export const allDrawings = categories.flatMap((category) => category.drawings);
 
 export const findDrawing = (drawingId: string) =>
   allDrawings.find((drawing) => drawing.id === drawingId);
-

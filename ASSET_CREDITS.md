@@ -20,6 +20,12 @@ The coloring images in `public/coloring` and the backgrounds in `public/backgrou
 | `public/coloring/sea/whale.svg` | https://openclipart.org/detail/273122/trace-and-colour-the-whale | OpenClipart public-domain library |
 | `public/coloring/space/rocket.svg` | https://openclipart.org/detail/272531/rocket-coloring-page | OpenClipart public-domain library |
 | `public/coloring/space/astronaut.svg` | https://openclipart.org/detail/250166/astronaut | OpenClipart public-domain library |
+| `public/coloring/music/singer.svg` | https://openclipart.org/detail/10223/singer | OpenClipart public-domain library |
+| `public/coloring/music/dancer.svg` | https://openclipart.org/detail/190188/highlander | OpenClipart public-domain library |
+| `public/coloring/music/boy-band.svg` | https://openclipart.org/detail/221711/little-boy-line-art | OpenClipart public-domain library |
+| `public/coloring/cute/cute-monster.svg` | https://openclipart.org/detail/321621/three-eyed-monster-remix | OpenClipart public-domain library |
+| `public/coloring/cute/baby-bunny.svg` | https://openclipart.org/detail/350812/simple-rabbit-optimized-outline | OpenClipart public-domain library |
+| `public/coloring/cute/doll.svg` | https://openclipart.org/detail/328251/vintage-girl-with-toys | OpenClipart public-domain library |
 | `public/backgrounds/forest.png` | https://freesvg.org/forest-scene | Public Domain / CC0 |
 | `public/backgrounds/meadow.png` | https://freesvg.org/meadow-cartoon-clip-art | Public Domain / CC0 |
 | `public/backgrounds/jungle.png` | https://freesvg.org/jungle-plants | Public Domain / CC0 |

@@ -1,4 +1,4 @@
-const CACHE_NAME = "amara-colors-v13";
+const CACHE_NAME = "amara-colors-v14";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -21,6 +21,12 @@ const APP_SHELL = [
   "./coloring/sea/whale.svg",
   "./coloring/space/rocket.svg",
   "./coloring/space/astronaut.svg",
+  "./coloring/music/singer.svg",
+  "./coloring/music/dancer.svg",
+  "./coloring/music/boy-band.svg",
+  "./coloring/cute/cute-monster.svg",
+  "./coloring/cute/baby-bunny.svg",
+  "./coloring/cute/doll.svg",
   "./backgrounds/forest.png",
   "./backgrounds/meadow.png",
   "./backgrounds/jungle.png",
