@@ -22,6 +22,7 @@ The coloring images in `public/coloring` and the backgrounds in `public/backgrou
 | `public/coloring/space/astronaut.svg` | https://openclipart.org/detail/250166/astronaut | OpenClipart public-domain library |
 | `public/coloring/music/pop-warriors.png` | User-provided image, enhanced for this app with built-in image generation | User-provided source |
 | `public/coloring/music/pop-duo.png` | User-provided image, enhanced for this app with built-in image generation | User-provided source |
+| `public/coloring/music/pop-boy.png` | User-provided image, enhanced for this app with built-in image generation | User-provided source |
 | `public/backgrounds/forest.png` | https://freesvg.org/forest-scene | Public Domain / CC0 |
 | `public/backgrounds/meadow.png` | https://freesvg.org/meadow-cartoon-clip-art | Public Domain / CC0 |
 | `public/backgrounds/jungle.png` | https://freesvg.org/jungle-plants | Public Domain / CC0 |

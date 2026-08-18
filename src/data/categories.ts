@@ -116,6 +116,7 @@ export const categories: Category[] = [
     drawings: [
       makeDrawing("music", "pop-warriors", "Guerreras pop", icons.sparkle, "pop-warriors.png"),
       makeDrawing("music", "pop-duo", "Duo pop", icons.music, "pop-duo.png"),
+      makeDrawing("music", "pop-boy", "Chico pop", icons.music, "pop-boy.png"),
     ],
   },
 ];

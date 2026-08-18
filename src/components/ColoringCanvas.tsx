@@ -27,12 +27,30 @@ type Props = {
 
 const CANVAS_SIZE = 960;
 const LINE_THRESHOLD = 95;
+const MAX_BACKGROUND_REGION_RATIO = 0.52;
+const TAP_SEARCH_RADIUS = 10;
 
 const barrierAt = (data: Uint8ClampedArray, index: number) =>
   data[index + 3] > 0 &&
   data[index] < LINE_THRESHOLD &&
   data[index + 1] < LINE_THRESHOLD &&
   data[index + 2] < LINE_THRESHOLD;
+
+const findPaintablePoint = (data: Uint8ClampedArray, x: number, y: number) => {
+  for (let radius = 0; radius <= TAP_SEARCH_RADIUS; radius += 1) {
+    for (let dy = -radius; dy <= radius; dy += 1) {
+      for (let dx = -radius; dx <= radius; dx += 1) {
+        if (Math.max(Math.abs(dx), Math.abs(dy)) !== radius) continue;
+        const px = x + dx;
+        const py = y + dy;
+        if (px < 0 || py < 0 || px >= CANVAS_SIZE || py >= CANVAS_SIZE) continue;
+        const index = (py * CANVAS_SIZE + px) * 4;
+        if (!barrierAt(data, index)) return { x: px, y: py };
+      }
+    }
+  }
+  return null;
+};
 
 const makeCanvas = () => {
   const canvas = document.createElement("canvas");
@@ -51,6 +69,20 @@ const drawImageCover = (
   const height = image.naturalHeight * scale;
   const x = (CANVAS_SIZE - width) / 2;
   const y = (CANVAS_SIZE - height) * focusY;
+  ctx.drawImage(image, x, y, width, height);
+};
+
+const drawImageContain = (
+  ctx: CanvasRenderingContext2D,
+  image: HTMLImageElement,
+  padding = 24
+) => {
+  const available = CANVAS_SIZE - padding * 2;
+  const scale = Math.min(available / image.naturalWidth, available / image.naturalHeight);
+  const width = image.naturalWidth * scale;
+  const height = image.naturalHeight * scale;
+  const x = (CANVAS_SIZE - width) / 2;
+  const y = (CANVAS_SIZE - height) / 2;
   ctx.drawImage(image, x, y, width, height);
 };
 
@@ -293,17 +325,18 @@ export const ColoringCanvas = forwardRef<ColoringCanvasHandle, Props>(
       const x = Math.max(0, Math.min(CANVAS_SIZE - 1, startX));
       const y = Math.max(0, Math.min(CANVAS_SIZE - 1, startY));
       const mask = maskCtx.getImageData(0, 0, CANVAS_SIZE, CANVAS_SIZE);
-      const startIndex = (y * CANVAS_SIZE + x) * 4;
-      if (barrierAt(mask.data, startIndex)) return null;
+      const paintStart = findPaintablePoint(mask.data, x, y);
+      if (!paintStart) return null;
 
       const region = makeCanvas();
       const regionCtx = region.getContext("2d", { willReadFrequently: true });
       if (!regionCtx) return null;
 
       const regionImage = regionCtx.createImageData(CANVAS_SIZE, CANVAS_SIZE);
-      const stack = [[x, y]];
+      const stack = [[paintStart.x, paintStart.y]];
       const visited = new Uint8Array(CANVAS_SIZE * CANVAS_SIZE);
       let touchesCanvasEdge = false;
+      let paintedPixels = 0;
 
       while (stack.length) {
         const item = stack.pop();
@@ -321,10 +354,11 @@ export const ColoringCanvas = forwardRef<ColoringCanvasHandle, Props>(
         regionImage.data[index + 1] = 255;
         regionImage.data[index + 2] = 255;
         regionImage.data[index + 3] = 255;
+        paintedPixels += 1;
         stack.push([px + 1, py], [px - 1, py], [px, py + 1], [px, py - 1]);
       }
 
-      if (touchesCanvasEdge) return null;
+      if (touchesCanvasEdge && paintedPixels > CANVAS_SIZE * CANVAS_SIZE * MAX_BACKGROUND_REGION_RATIO) return null;
       regionCtx.putImageData(regionImage, 0, 0);
       return region;
     };
@@ -423,7 +457,7 @@ export const ColoringCanvas = forwardRef<ColoringCanvasHandle, Props>(
         if (savedImageData) colorCtx.putImageData(savedImageData, 0, 0);
 
         lineCtx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
-        lineCtx.drawImage(lineImage, 0, 0, CANVAS_SIZE, CANVAS_SIZE);
+        drawImageContain(lineCtx, lineImage);
         keepLineArtOnly(lineCtx);
         maskCtx.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
         maskCtx.drawImage(lineCanvas, 0, 0);
