@@ -31,6 +31,8 @@ export const categories: Category[] = [
     drawings: [
       makeDrawing("animals", "cat", "Gato", "🐱", "cat.png"),
       makeDrawing("animals", "dog", "Perro", "🐶", "dog.png"),
+      makeDrawing("animals", "butterfly", "Mariposa", "🦋", "butterfly.svg"),
+      makeDrawing("animals", "turtle", "Tortuga", "🐢", "turtle.svg"),
     ],
   },
   {
@@ -38,35 +40,51 @@ export const categories: Category[] = [
     title: "Dinosaurios",
     emoji: "🦖",
     color: "#d7f7a8",
-    drawings: [makeDrawing("dinosaurs", "dino", "Dinosaurio", "🦖", "dino.svg")],
+    drawings: [
+      makeDrawing("dinosaurs", "dino", "Dinosaurio", "🦖", "dino.svg"),
+      makeDrawing("dinosaurs", "baby-dino", "Dino bebé", "🥚", "baby-dino.svg"),
+    ],
   },
   {
     id: "fantasy",
     title: "Fantasía",
     emoji: "🌈",
     color: "#d9ceff",
-    drawings: [makeDrawing("fantasy", "star", "Estrella", "⭐", "star.svg")],
+    drawings: [
+      makeDrawing("fantasy", "star", "Estrella", "⭐", "star.svg"),
+      makeDrawing("fantasy", "rainbow", "Arcoiris", "🌈", "rainbow.svg"),
+      makeDrawing("fantasy", "castle", "Castillo", "🏰", "castle.svg"),
+    ],
   },
   {
     id: "food",
     title: "Comida",
     emoji: "🍦",
     color: "#ffe4b8",
-    drawings: [makeDrawing("food", "ice-cream", "Helado", "🍦", "ice-cream.png")],
+    drawings: [
+      makeDrawing("food", "ice-cream", "Helado", "🍦", "ice-cream.png"),
+      makeDrawing("food", "cupcake", "Pastelito", "🧁", "cupcake.svg"),
+    ],
   },
   {
     id: "sea",
     title: "Mar",
     emoji: "🐠",
     color: "#bfeeff",
-    drawings: [makeDrawing("sea", "fish", "Pez", "🐠", "fish.png")],
+    drawings: [
+      makeDrawing("sea", "fish", "Pez", "🐠", "fish.png"),
+      makeDrawing("sea", "whale", "Ballena", "🐳", "whale.svg"),
+    ],
   },
   {
     id: "space",
     title: "Espacio",
     emoji: "🚀",
     color: "#c9ddff",
-    drawings: [makeDrawing("space", "rocket", "Cohete", "🚀", "rocket.png")],
+    drawings: [
+      makeDrawing("space", "rocket", "Cohete", "🚀", "rocket.png"),
+      makeDrawing("space", "ufo", "Nave", "🛸", "ufo.svg"),
+    ],
   },
 ];
 

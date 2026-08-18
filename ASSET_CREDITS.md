@@ -17,3 +17,11 @@ The coloring images in `public/coloring` were selected from sources that list th
 | `public/backgrounds/jungle.png` | https://freesvg.org/jungle-plants | Public Domain / CC0 |
 | `public/backgrounds/rainbow-meadow.png` | https://freesvg.org/rainbow-in-the-sky | Public Domain / CC0 |
 | `public/backgrounds/starry-sky.png` | https://freesvg.org/starry-sky | Public Domain / CC0 |
+| `public/coloring/animals/butterfly.svg` | Original project artwork | Created for this app |
+| `public/coloring/animals/turtle.svg` | Original project artwork | Created for this app |
+| `public/coloring/dinosaurs/baby-dino.svg` | Original project artwork | Created for this app |
+| `public/coloring/fantasy/rainbow.svg` | Original project artwork | Created for this app |
+| `public/coloring/fantasy/castle.svg` | Original project artwork | Created for this app |
+| `public/coloring/food/cupcake.svg` | Original project artwork | Created for this app |
+| `public/coloring/sea/whale.svg` | Original project artwork | Created for this app |
+| `public/coloring/space/ufo.svg` | Original project artwork | Created for this app |
